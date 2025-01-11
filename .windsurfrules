@@ -1,0 +1,102 @@
+# Mythosia Game Development Guidelines
+
+## Project Overview
+- Game Engine: Custom TypeScript implementation
+- Tech Stack: TypeScript, WebGL, Jest for testing
+- Build Tools: Vite
+
+## Game Mechanics
+### Core Gameplay
+- Auto-playing game system
+- Player interaction limited to strategic choices
+- Focus on evolution and progression through:
+  - Unlocking new abilities
+  - Developing body parts
+  - Making strategic evolutionary choices
+
+### Player Interaction
+- No direct control over moment-to-moment gameplay
+- Key decision points for:
+  - Ability selection and upgrades
+  - Body part evolution
+  - Strategic adaptation choices
+- Choices impact long-term evolution and survival strategy
+
+### Creature Behavior
+- Two opposing teams of autonomous creatures
+- Creatures engage in automatic combat
+- Independent movement and decision-making
+- Reproduction system:
+  - Based on seed mechanics
+  - Influences population growth
+  - Affects team survival strategy
+
+### Combat System
+- Autonomous warfare between teams
+- Creatures fight independently
+- No direct player control during battles
+- Combat outcomes influence:
+  - Population dynamics
+  - Territory control
+  - Resource distribution
+
+## Core Architecture
+### Project Structure
+- src/
+  - engine/: Core game engine components
+  - game/: Game-specific logic and mechanics
+  - assets/: Game assets (images, sounds, etc.)
+  - utils/: Shared utilities
+  - types/: TypeScript type definitions
+
+### Development Rules
+- Use TypeScript for all code files
+- Implement proper type definitions
+- Follow TDD practices
+- Use absolute imports
+- Maintain clean code architecture
+- Document public APIs and complex logic
+
+## Testing Strategy
+- Unit tests for all engine components
+- Integration tests for game mechanics
+- Performance tests for critical paths
+- Test structure:
+  1. Setup game state
+  2. Execute actions
+  3. Verify results
+  4. Cleanup
+
+## Game Engine Guidelines
+### Performance
+- Use requestAnimationFrame for game loop
+- Implement proper memory management
+- Optimize render cycles
+- Profile performance regularly
+
+### State Management
+- Immutable game state
+- Clear update patterns
+- Predictable state transitions
+- Proper error handling
+
+## Development Workflow
+### Git Commits
+Prefixes:
+- engine: Engine-related changes
+- game: Game mechanics changes
+- perf: Performance improvements
+- test: Testing updates
+- docs: Documentation
+- fix: Bug fixes
+
+Rules:
+- Clear commit messages
+- Single responsibility per commit
+- Reference issues when applicable
+
+### Code Style
+- Consistent naming conventions
+- Clear function signatures
+- Proper error handling
+- Documentation for complex logic
